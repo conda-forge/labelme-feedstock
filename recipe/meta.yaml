@@ -38,7 +38,7 @@ requirements:
 
 test:
   requires:
-    - qt
+    - pyqt
   commands:
     - labelme --help
 
