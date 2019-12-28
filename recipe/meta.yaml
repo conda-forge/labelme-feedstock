@@ -35,6 +35,7 @@ requirements:
     - pyyaml
     - termcolor
     - qtpy
+    - imgviz >=0.10.2
 
 test:
   requires:
