@@ -29,6 +29,7 @@ requirements:
     - pip
   run:
     - python
+    - imgviz >=0.10.2
     - matplotlib
     - numpy
     - pillow
