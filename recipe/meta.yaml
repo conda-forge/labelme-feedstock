@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 7a5034a11e48ea1d8952fb286f36a32d77c2abd4e65f0cf6c88d1e2fbed37b91
-  patches:
-    - disable_automatic_install_of_qt.patch
 
 build:
   number: 0
@@ -29,7 +27,7 @@ requirements:
     - pip
   run:
     - python
-    - imgviz >=0.10.2
+    - imgviz >=0.10.6
     - matplotlib
     - numpy
     - pillow
