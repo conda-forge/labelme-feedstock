@@ -12,7 +12,7 @@ source:
     - disable_automatic_install_of_qt.patch
 
 build:
-  number: 0
+  number: 1
   # too lazy to build python 2.7 for an interactive tool
   skip: true  # [py==27]
   script: "{{ PYTHON }} -m pip install . -vv"
@@ -30,7 +30,7 @@ requirements:
   run:
     - python
     - imgviz >=0.10.2
-    - matplotlib
+    - matplotlib-base
     - numpy
     - pillow
     - pyyaml
