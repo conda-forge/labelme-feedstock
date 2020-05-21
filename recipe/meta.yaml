@@ -8,8 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: c11dd4e281d926e3da5450fd64009d46e6cf23577b6750717d643150955b62d8
-  patches:
-    - disable_automatic_install_of_qt.patch
+  # patches:
+  #   - disable_automatic_install_of_qt.patch
 
 build:
   number: 0
