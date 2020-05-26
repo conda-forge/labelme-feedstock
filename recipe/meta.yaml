@@ -51,7 +51,7 @@ app:
 
 about:
   home: https://github.com/wkentaro/labelme
-  license: GPL-3.0
+  license: GPL-3.0-or-later
   license_family: GPL
   license_file: LICENSE
   summary: Image Polygonal Annotation with Python (polygon, rectangle, circle, line, point and image-level flag annotation).
