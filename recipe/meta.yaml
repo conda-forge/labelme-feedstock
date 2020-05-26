@@ -1,5 +1,5 @@
 {% set name = "labelme" %}
-{% set version = "4.2.10" %}
+{% set version = "4.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c11dd4e281d926e3da5450fd64009d46e6cf23577b6750717d643150955b62d8
+  sha256: 1d86b99ed9c2e9f90b156794b01a986a91131bd36d94e47ac4868692b9a21855
   # patches:
   #   - disable_automatic_install_of_qt.patch
 
@@ -51,7 +51,7 @@ app:
 
 about:
   home: https://github.com/wkentaro/labelme
-  license: GPL-3.0
+  license: GPL-3.0-or-later
   license_family: GPL
   license_file: LICENSE
   summary: Image Polygonal Annotation with Python (polygon, rectangle, circle, line, point and image-level flag annotation).
