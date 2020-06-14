@@ -32,7 +32,7 @@ requirements:
     - imgviz >=0.10.2
     - matplotlib-base
     - numpy
-    - pillow
+    - pillow >=2.8.0
     - pyyaml
     - termcolor
     - qtpy
