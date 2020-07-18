@@ -5,7 +5,7 @@ Home: https://github.com/wkentaro/labelme
 
 Package license: GPL-3.0-or-later
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Image Polygonal Annotation with Python (polygon, rectangle, circle, line, point and image-level flag annotation).
 

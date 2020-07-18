@@ -1,5 +1,5 @@
 {% set name = "labelme" %}
-{% set version = "4.5.5" %}
+{% set version = "4.5.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c0ca8f364538bb2626cca4d3ab8d96193a69a18ad5cc7d3d8695fa0312912878
+  sha256: 5967588d5bd8bf3c94742593a35798cfdcb1a4c1693c62d0819af2f2f093b440
   # patches:
   #   - disable_automatic_install_of_qt.patch
 
@@ -36,6 +36,7 @@ requirements:
     - pyyaml
     - termcolor
     - qtpy
+    - colorama  # [win]
 
 test:
   requires:
