@@ -36,6 +36,7 @@ requirements:
     - pyyaml
     - termcolor
     - qtpy
+    - colorama  # [win]
 
 test:
   requires:
