@@ -13,8 +13,6 @@ source:
 
 build:
   number: 1
-  # too lazy to build python 2.7 for an interactive tool
-  skip: true  # [py==27]
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - labelme = labelme.__main__:main
