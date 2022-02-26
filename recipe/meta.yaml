@@ -1,5 +1,5 @@
 {% set name = "labelme" %}
-{% set version = "4.6.0" %}
+{% set version = "5.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 66809cbe86b99c53a45b31e0a1c042587c5da77cf68be6499debf2d1639ef09d
+  sha256: bb1735feac2c095d8a063acf6f877ba924f2d2a0d4a706d4c73d3573382df7cd
   # patches:
   #   - disable_automatic_install_of_qt.patch
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - labelme = labelme.__main__:main
