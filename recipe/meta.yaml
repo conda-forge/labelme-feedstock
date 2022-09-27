@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 5c75caa0a022eff61edf4b5ce389cafa2584541dc54b2a864acbc48050f50d35
-  # patches:
-  #   - disable_automatic_install_of_qt.patch
 
 build:
   number: 0
@@ -25,6 +23,9 @@ requirements:
   host:
     - python
     - pip
+    # Avoid logic inside the instlaler that adds a specific
+    # pyqt vs pyside2 as dependency
+    - pyside2
   run:
     - python
     - natsort
@@ -39,9 +40,11 @@ requirements:
 
 test:
   requires:
-    - pyqt
+    - pyqt     # [py==39]
+    - pyside2  # [py!=39]
   commands:
     - labelme --help
+    - pip check
 
 app:
   entry: labelme
