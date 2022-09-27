@@ -42,6 +42,7 @@ test:
   requires:
     - pyqt     # [py==39]
     - pyside2  # [py!=39]
+    - pip
   commands:
     - labelme --help
     - pip check
