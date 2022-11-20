@@ -8,8 +8,10 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 1d937840fd50cd25a53f18d9fc2bf2581f0435b13414e5a01838ebbfeff1f74e
-  # patches:
-  #   - disable_automatic_install_of_qt.patch
+  patches:
+    # The user may have installed either pyside2 or qtpy
+    # just let them decide
+    - do_not_add_qt_to_pip_depencnies.patch
 
 build:
   number: 0
