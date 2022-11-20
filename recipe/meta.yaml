@@ -41,8 +41,10 @@ requirements:
 test:
   requires:
     - pyside2
+    - pip
   commands:
     - labelme --help
+    - pip check
 
 app:
   entry: labelme
