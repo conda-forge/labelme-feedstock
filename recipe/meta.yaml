@@ -1,5 +1,5 @@
 {% set name = "labelme" %}
-{% set version = "5.2.1" %}
+{% set version = "5.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 556c793b33b32de47324d60182c356ccefcbf8ae4a9217392b5f6a32ea5251e1
+  sha256: aa34a71d5f1f5561c4cc0b43e1e66192762913ced12f1348e2cc2a12fada442e
   patches:
     # The user may have installed either pyside2 or qtpy
     # just let them decide
