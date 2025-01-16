@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 556c793b33b32de47324d60182c356ccefcbf8ae4a9217392b5f6a32ea5251e1
   patches:
     # The user may have installed either pyside2 or qtpy
@@ -14,7 +14,7 @@ source:
     - do_not_add_qt_to_pip_depencnies.patch
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -26,10 +26,10 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - natsort
     - imgviz >=0.11.0
     - matplotlib-base
@@ -44,6 +44,7 @@ test:
   requires:
     - pyside2
     - pip
+    - python {{ python_min }}
   commands:
     - labelme --help
     - pip check
